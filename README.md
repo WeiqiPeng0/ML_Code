@@ -13,7 +13,7 @@ $$
 \frac{\partial L}{\partial \hat{y}} = -\left[ \frac{y}{\hat{y}} - \frac{1 - y}{1 - \hat{y}} \right]
 $$
 
-#### 🔹 Derivative w.r.t. logits \( z \) (where $\( \hat{y} = \sigma(z) \)$):
+#### 🔹 Derivative w.r.t. logits \( z \) (where \( $\hat{y} = \sigma(z)$ \)):
 $$
 \frac{\partial L}{\partial z} = \hat{y} - y
 $$
