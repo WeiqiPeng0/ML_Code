@@ -1,13 +1,41 @@
 # ML_Code
-- 二分类交叉熵（Binary Cross Entropy）:
+## 🔁 Cross-Entropy Loss Summary
 
+### 🟩 Binary Cross-Entropy (BCE)
+
+#### 🔸 Original Loss:
 $$
-L_{BCE} = -\frac{1}{N} \sum_{i=1}^{N} \left[ y_i \log(\hat{y}_i) + (1 - y_i)\log(1 - \hat{y}_i) \right]
+L = -\left[ y \log(\hat{y}) + (1 - y) \log(1 - \hat{y}) \right]
 $$
 
-- 多分类交叉熵（Categorical Cross Entropy）:
+#### 🔹 Derivative w.r.t. prediction \( \hat{y} \):
+$$
+\frac{\partial L}{\partial \hat{y}} = -\left[ \frac{y}{\hat{y}} - \frac{1 - y}{1 - \hat{y}} \right]
+$$
 
+#### 🔹 Derivative w.r.t. logits \( z \) (where \( \hat{y} = \sigma(z) \)):
 $$
-L_{CCE} = -\frac{1}{N} \sum_{i=1}^{N} \sum_{c=1}^{C} y_{i,c} \log(\hat{y}_{i,c})
+\frac{\partial L}{\partial z} = \hat{y} - y
 $$
+
+
+---
+
+### 🟦 Multi-Class Cross-Entropy (CCE)
+
+#### 🔸 Original Loss (for a single sample):
+$$
+L = -\sum_{c=1}^{C} y_c \log(\hat{y}_c)
+$$
+
+#### 🔹 Derivative w.r.t. prediction \( \hat{y}_k \):
+$$
+\frac{\partial L}{\partial \hat{y}_k} = -\frac{y_k}{\hat{y}_k}
+$$
+
+#### 🔹 Derivative w.r.t. logits \( z_k \) (where \( \hat{y}_k = \text{softmax}(z_k) \)):
+$$
+\frac{\partial L}{\partial z_k} = \hat{y}_k - y_k
+$$
+
 
