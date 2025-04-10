@@ -8,7 +8,7 @@ $$
 L = -\left[ y \log(\hat{y}) + (1 - y) \log(1 - \hat{y}) \right]
 $$
 
-#### 🔹 Derivative w.r.t. prediction \( \hat{y} \):
+#### 🔹 Derivative w.r.t. prediction $\( \hat{y} \)$:
 $$
 \frac{\partial L}{\partial \hat{y}} = -\left[ \frac{y}{\hat{y}} - \frac{1 - y}{1 - \hat{y}} \right]
 $$
