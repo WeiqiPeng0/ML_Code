@@ -17,7 +17,6 @@ class LR:
         return X @ self.w
 
 
-
 # Gradient descent based
 def loss(X, y, theta):
     m = len(y)
